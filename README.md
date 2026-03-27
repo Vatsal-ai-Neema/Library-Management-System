@@ -1,6 +1,6 @@
-# Library Management System
+# Workbook Full-Stack Submission
 
-Full-stack starter project built from the Excel workbook specification.
+Full-stack starter project built from the Excel workbook specification as one submission repository.
 
 ## Stack
 
@@ -8,8 +8,9 @@ Full-stack starter project built from the Excel workbook specification.
 - Database: SQLite
 - Frontend: React + Vite
 
-## Workbook modules covered
+## Systems covered
 
+### 1. Library Management System
 - Admin login
 - User login
 - Admin and user dashboards
@@ -26,9 +27,24 @@ Full-stack starter project built from the Excel workbook specification.
   - Books
   - Movies
   - Memberships
-  - Active issues
-  - Overdue returns
-  - Issue requests
+- Active issues
+- Overdue returns
+- Issue requests
+
+### 2. Business / CRM + Sales System
+- Sales person login
+- Customer list
+- Customer detail
+- Ledger info
+- Aging
+- Product list
+- Scheme list
+- Indent booking
+- Order status
+- Travel report
+- T.A / D.A
+- Farmer demo
+- Dealer-style customer and indent flows
 
 ## Structure
 
@@ -60,10 +76,12 @@ npm run dev
 
 - Admin: `adm` / `adm`
 - User: `user` / `user`
+- Sales / CRM: `HYD-118` / `HYD-118`
 
 ## Notes
 
 - The code uses SQLite by default for easy local setup.
 - Passwords are masked in the frontend login form.
-- Access is split by role according to the workbook rules.
-- Maintenance data feeds transactions and reports, matching the workbook instructions.
+- Access is split by workbook system and role.
+- Maintenance data feeds library transactions and reports, matching the workbook instructions.
+- This repo is intentionally not deployed.

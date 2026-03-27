@@ -194,6 +194,28 @@ textarea {
   gap: 10px;
 }
 
+.toggle-row,
+.inline-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.toggle {
+  border: 1px solid #d2d9de;
+  background: #fff;
+  color: #1b2430;
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.active-toggle {
+  background: #d38b34;
+  color: #fff;
+  border-color: #d38b34;
+}
+
 .table-wrap {
   overflow: auto;
 }

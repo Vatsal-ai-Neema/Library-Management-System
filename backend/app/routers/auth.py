@@ -21,4 +21,5 @@ def login(payload: LoginRequest, db: Session = Depends(get_db)):
         username=user.username,
         full_name=user.full_name,
         role="admin" if user.is_admin else "user",
+        system_type=user.system_type,
     )

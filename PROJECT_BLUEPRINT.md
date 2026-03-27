@@ -6,6 +6,7 @@ This blueprint treats the Excel workbook as one combined specification document.
 
 Primary project area identified from the workbook:
 - Library Management System
+- Business / CRM + Sales System
 - Roles: Admin and User
 - Major modules: Login, Home, Maintenance, Transactions, Reports
 
