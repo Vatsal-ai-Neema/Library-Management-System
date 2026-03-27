@@ -172,41 +172,9 @@ Key rules extracted from the workbook:
 - `POST /users`
 - `PUT /users/{id}`
 
-## Full-stack implementation options
+## Full-stack implementation path
 
-### Option A: Django + Django REST Framework + React
-Best when:
-- You want a strong Python backend with built-in admin, ORM, auth, and rapid CRUD development.
-
-Pros:
-- Fast for role-based business apps
-- Excellent ORM and migrations
-- Easy admin panel for internal maintenance
-- Mature authentication ecosystem
-
-### Option B: FastAPI + PostgreSQL + React
-Best when:
-- You want a modern API-first architecture and a clean separation between frontend and backend.
-
-Pros:
-- Very fast backend development
-- Strong typing and docs
-- Great for clean REST APIs
-- Easy to scale later
-
-### Option C: Django full-stack with server-rendered templates
-Best when:
-- You want the fastest delivery with fewer moving parts.
-
-Pros:
-- One codebase
-- Simple deployment
-- Good for academic/demo projects
-- Lowest frontend complexity
-
-## Recommended path
-
-Recommended stack for this workbook:
+Tech stack for this workbook:
 - Backend: Django + Django REST Framework
 - Frontend: React + Vite
 - Database: PostgreSQL
@@ -214,56 +182,93 @@ Recommended stack for this workbook:
 - UI: React Router + form validation + role guards
 
 Reason:
-- The workbook describes many CRUD screens, validations, reports, and role-based actions. Django handles this kind of system very efficiently.
+- The workbook describes many CRUD screens, validations, reports, and role-based actions.
 
 ## Project breakdown
 
 ### Phase 1. Requirement normalization
-- Convert workbook sheets into one requirements matrix
-- Identify mandatory validations and business rules
-- Finalize entities and field definitions
-- Remove ambiguity like book vs movie shared flows
+-Read the Excel workbook as one combined specification
+-Separate the project into 2 systems:
+--Library Management System
+--Business / CRM + Sales System
+-Extract mandatory validations, roles, and page behaviors
+-Map workbook sheets to modules, entities, and flows
 
 ### Phase 2. Backend foundation
-- Create Django project and apps
-- Configure PostgreSQL
-- Build custom user model
-- Add role and permission middleware
-- Add API structure
+-Create Python backend using FastAPI
+-Configure PostgreSQL database connection
+-Set up SQLAlchemy models
+-Add API routers for library and business modules
+-Build login API and system-based role split
 
 ### Phase 3. Database and business logic
-- Implement models
-- Add migrations
-- Add issue/return/fine calculation logic
-- Add overdue logic
-- Add report queries
+Implement models for:
+-users
+-memberships
+-catalog items
+-issues
+-fines
+-customers
+-ledger
+-products
+-schemes
+-indents
+-travel
+-expenses
+-farmer demo
+-Seed initial demo data
+-Add issue, return, overdue, and fine calculation logic
+-Add report data endpoints
 
 ### Phase 4. Frontend
-- Build auth pages
-- Build admin and user dashboards
-- Build maintenance forms
-- Build transaction flows
-- Build report tables and filters
+-Build frontend using React + Vite
+-Create login screen for both systems
+-Build library admin/user dashboards
+-Build maintenance forms
+-Build transactions UI
+-Build reports tables
+-Build business / CRM pages:
+-customers
+-customer detail
+-ledger
+-aging
+-products
+-indent book
+-schemes
+-status
+-travel
+-expenses
+-farmers
 
 ### Phase 5. Validation and security
-- Required-field validations
-- Role checks on UI and API
-- Masked passwords
-- Input sanitation
-- Error handling
+-Required-field validations on forms
+-Password masking on login forms
+-Role-based UI separation for admin and user
+-Search validation for book availability
+-Radio button single-selection logic
+-Fine validation and pending-fine handling
+-Checkbox-based yes/no behavior where required
 
-### Phase 6. Testing
-- Unit tests for business logic
-- API tests for role access
-- Frontend form tests
-- End-to-end flow tests
+### Phase 6. Testing and verification
+-Manual validation against workbook screens and instructions
+-Local backend API verification
+-Local frontend run verification
+-Form flow validation for:
+-login
+-membership
+-catalog
+-issue
+-return
+-pay fine
+-CRM forms
 
-### Phase 7. Deployment
-- Docker setup
-- Environment variables
-- Production database
-- Static/media handling
-- Deployment guide
+### Phase 7. Submission preparation
+-PostgreSQL local setup
+-Git repository initialization
+-GitHub repository creation
+-Push code to main branch
+-No deployment, as per requirement
+-Submission-ready GitHub link preparation
 
 ## Task coverage map
 
