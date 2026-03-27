@@ -104,7 +104,6 @@ The frontend runs at `http://127.0.0.1:5173`.
 - Add automated backend and frontend test coverage
 - Add Docker-based local setup
 - Deploy a hosted demo environment
-- Export reports to CSV or PDF
 
 ## Release
 
