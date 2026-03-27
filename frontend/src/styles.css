@@ -1,0 +1,225 @@
+:root {
+  font-family: "Segoe UI", sans-serif;
+  color: #1b2430;
+  background: linear-gradient(180deg, #f7f4ed 0%, #efe6d7 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.shell-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-card,
+.panel {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(38, 50, 56, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 14px 36px rgba(44, 62, 80, 0.08);
+}
+
+.login-card {
+  width: min(520px, 100%);
+  padding: 32px;
+}
+
+.sidebar {
+  padding: 24px;
+  background: #16324f;
+  color: #f7f8fa;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  color: #d7e4f4;
+}
+
+.shell-login .eyebrow {
+  color: #8f5a1c;
+}
+
+.subtle {
+  color: #5f6b78;
+}
+
+.nav-btn,
+.logout-btn,
+button[type="submit"],
+.report-tabs button {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+
+.nav-btn {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.nav-btn.active,
+.logout-btn,
+button[type="submit"],
+.report-tabs button {
+  background: #d38b34;
+  color: #fff;
+}
+
+.logout-btn {
+  margin-top: auto;
+}
+
+.grid,
+.stack {
+  display: grid;
+  gap: 14px;
+}
+
+.panel {
+  padding: 20px;
+}
+
+.cards,
+.two-col,
+.three-col {
+  display: grid;
+  gap: 16px;
+}
+
+.cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.three-col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  background: #fff7ee;
+  border-radius: 16px;
+  padding: 18px;
+  border: 1px solid #f2dcc0;
+}
+
+.card strong {
+  display: block;
+  font-size: 28px;
+  margin-top: 8px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d2d9de;
+  background: #fff;
+}
+
+textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check-row input {
+  width: auto;
+}
+
+.alert,
+.status {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #fff7ee;
+  border: 1px solid #f2dcc0;
+}
+
+.report-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ebedf0;
+  text-align: left;
+}
+
+th {
+  background: #f4efe5;
+}
+
+@media (max-width: 960px) {
+  .shell,
+  .two-col,
+  .three-col,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
