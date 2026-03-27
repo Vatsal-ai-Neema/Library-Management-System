@@ -1,89 +1,111 @@
-# Workbook Full-Stack Submission
+# Library Management System
 
-Full-stack starter project built from the Excel workbook specification as one submission repository.
+A full-stack library operations platform built with FastAPI, PostgreSQL, and React. The project includes role-based access for administrators and users, catalog and membership maintenance, circulation workflows, fine handling, and reporting tools in a single repository.
 
-## Stack
+## Highlights
 
-- Backend: FastAPI
+- Role-based login for admin and user experiences
+- Library maintenance modules for memberships, users, books, and movies
+- Transaction flows for search, issue, return, and fine payment
+- Reports for inventory, memberships, active issues, overdue returns, and requests
+- PostgreSQL-backed backend API with a React frontend
+
+## Tech Stack
+
+- Backend: FastAPI, SQLAlchemy, Pydantic
 - Database: PostgreSQL
-- Frontend: React + Vite
+- Frontend: React, Vite, CSS
 
-## Systems covered
-
-### 1. Library Management System
-- Admin login
-- User login
-- Admin and user dashboards
-- Maintenance
-  - Memberships
-  - Books and movies
-  - User management
-- Transactions
-  - Availability search
-  - Issue item
-  - Return item
-  - Pay fine
-- Reports
-  - Books
-  - Movies
-  - Memberships
-- Active issues
-- Overdue returns
-- Issue requests
-
-### 2. Business / CRM + Sales System
-- Sales person login
-- Customer list
-- Customer detail
-- Ledger info
-- Aging
-- Product list
-- Scheme list
-- Indent booking
-- Order status
-- Travel report
-- T.A / D.A
-- Farmer demo
-- Dealer-style customer and indent flows
-
-## Structure
+## Repository Structure
 
 ```text
 backend/
   app/
     routers/
+    main.py
+    models.py
+    schemas.py
+    services.py
 frontend/
   src/
+    App.jsx
+    styles.css
+PROJECT_BLUEPRINT.md
 ```
 
-## Run backend
+## Core Modules
 
-```bash
+### Authentication and Access
+
+- Admin login
+- User login
+- Role-aware navigation and dashboards
+
+### Maintenance
+
+- Membership management
+- Book and movie catalog management
+- User administration
+
+### Transactions
+
+- Availability search
+- Issue item workflow
+- Return item workflow
+- Fine payment handling
+
+### Reports
+
+- Books report
+- Movies report
+- Membership report
+- Active issues report
+- Overdue returns report
+- Issue requests report
+
+## Local Setup
+
+### Backend
+
+```powershell
 cd backend
+python -m venv .venv
+.venv\Scripts\activate
 pip install -r requirements.txt
-set DATABASE_URL=postgresql+psycopg2://postgres:postgres@localhost:5432/workbook_submission
+$env:DATABASE_URL="postgresql+psycopg2://postgres:postgres@localhost:5432/workbook_submission"
 uvicorn app.main:app --reload
 ```
 
-## Run frontend
+The API runs at `http://127.0.0.1:8000`.
 
-```bash
+### Frontend
+
+```powershell
 cd frontend
 npm install
 npm run dev
 ```
 
-## Default login users
+The frontend runs at `http://127.0.0.1:5173`.
+
+## Default Demo Credentials
 
 - Admin: `adm` / `adm`
 - User: `user` / `user`
-- Sales / CRM: `HYD-118` / `HYD-118`
+- Sales or CRM: `HYD-118` / `HYD-118`
 
-## Notes
+## Database Notes
 
-- The backend is now configured for PostgreSQL.
 - The default fallback database URL is `postgresql+psycopg2://postgres:postgres@localhost:5432/workbook_submission`.
-- Passwords are masked in the frontend login form.
-- Access is split by workbook system and role.
-- Maintenance data feeds library transactions and reports, matching the workbook instructions.
-- This repo is intentionally not deployed.
+- PostgreSQL must be running locally before the backend starts.
+
+## Roadmap
+
+- Add automated backend and frontend test coverage
+- Add Docker-based local setup
+- Deploy a hosted demo environment
+- Export reports to CSV or PDF
+
+## Release
+
+The first public snapshot of this repository is tracked in [CHANGELOG.md](./CHANGELOG.md) as `v1.0.0`.
