@@ -1,6 +1,6 @@
 # Library Management System
 
-A full-stack library operations platform built with FastAPI, PostgreSQL, and React. The project includes role-based access for administrators and users, catalog and membership maintenance, circulation workflows, fine handling, and reporting tools in a single repository.
+This a full-stack library operations platform built with FastAPI, PostgreSQL, and React. The project includes role-based access for administrators and users, catalog and membership maintenance, circulation workflows, fine handling, and reporting tools in a single repository.
 
 ## Highlights
 
