@@ -187,88 +187,88 @@ Reason:
 ## Project breakdown
 
 ### Phase 1. Requirement normalization
--Read the Excel workbook as one combined specification
--Separate the project into 2 systems:
---Library Management System
---Business / CRM + Sales System
--Extract mandatory validations, roles, and page behaviors
--Map workbook sheets to modules, entities, and flows
+- Read the Excel workbook as one combined specification
+- Separate the project into 2 systems:
+-- Library Management System
+-- Business / CRM + Sales System
+- Extract mandatory validations, roles, and page behaviors
+- Map workbook sheets to modules, entities, and flows
 
 ### Phase 2. Backend foundation
--Create Python backend using FastAPI
--Configure PostgreSQL database connection
--Set up SQLAlchemy models
--Add API routers for library and business modules
--Build login API and system-based role split
+- Create Python backend using FastAPI
+- Configure PostgreSQL database connection
+- Set up SQLAlchemy models
+- Add API routers for library and business modules
+- Build login API and system-based role split
 
 ### Phase 3. Database and business logic
 Implement models for:
--users
--memberships
--catalog items
--issues
--fines
--customers
--ledger
--products
--schemes
--indents
--travel
--expenses
--farmer demo
--Seed initial demo data
--Add issue, return, overdue, and fine calculation logic
--Add report data endpoints
+- users
+- memberships
+- catalog items
+- issues
+- fines
+- customers
+- ledger
+- products
+- schemes
+- indents
+- travel
+- expenses
+- farmer demo
+- Seed initial demo data
+- Add issue, return, overdue, and fine calculation logic
+- Add report data endpoints
 
 ### Phase 4. Frontend
--Build frontend using React + Vite
--Create login screen for both systems
--Build library admin/user dashboards
--Build maintenance forms
--Build transactions UI
--Build reports tables
--Build business / CRM pages:
--customers
--customer detail
--ledger
--aging
--products
--indent book
--schemes
--status
--travel
--expenses
--farmers
+- Build frontend using React + Vite
+- Create login screen for both systems
+- Build library admin/user dashboards
+- Build maintenance forms
+- Build transactions UI
+- Build reports tables
+- Build business / CRM pages:
+- customers
+- customer detail
+- ledger
+- aging
+- products
+- indent book
+- schemes
+- status
+- travel
+- expenses
+- farmers
 
 ### Phase 5. Validation and security
--Required-field validations on forms
--Password masking on login forms
--Role-based UI separation for admin and user
--Search validation for book availability
--Radio button single-selection logic
--Fine validation and pending-fine handling
--Checkbox-based yes/no behavior where required
+- Required-field validations on forms
+- Password masking on login forms
+- Role-based UI separation for admin and user
+- Search validation for book availability
+- Radio button single-selection logic
+- Fine validation and pending-fine handling
+- Checkbox-based yes/no behavior where required
 
 ### Phase 6. Testing and verification
--Manual validation against workbook screens and instructions
--Local backend API verification
--Local frontend run verification
--Form flow validation for:
--login
--membership
--catalog
--issue
--return
--pay fine
--CRM forms
+- Manual validation against workbook screens and instructions
+- Local backend API verification
+- Local frontend run verification
+- Form flow validation for:
+  - login
+  - membership
+  - catalog
+  - issue
+  - return
+  - pay fine
+  - CRM forms
 
 ### Phase 7. Submission preparation
--PostgreSQL local setup
--Git repository initialization
--GitHub repository creation
--Push code to main branch
--No deployment, as per requirement
--Submission-ready GitHub link preparation
+- PostgreSQL local setup
+- Git repository initialization
+- GitHub repository creation
+- Push code to main branch
+- No deployment, as per requirement
+- Submission-ready GitHub link preparation
 
 ## Task coverage map
 
