@@ -5,7 +5,7 @@ Full-stack starter project built from the Excel workbook specification as one su
 ## Stack
 
 - Backend: FastAPI
-- Database: SQLite
+- Database: PostgreSQL
 - Frontend: React + Vite
 
 ## Systems covered
@@ -61,6 +61,7 @@ frontend/
 ```bash
 cd backend
 pip install -r requirements.txt
+set DATABASE_URL=postgresql+psycopg2://postgres:postgres@localhost:5432/workbook_submission
 uvicorn app.main:app --reload
 ```
 
@@ -80,7 +81,8 @@ npm run dev
 
 ## Notes
 
-- The code uses SQLite by default for easy local setup.
+- The backend is now configured for PostgreSQL.
+- The default fallback database URL is `postgresql+psycopg2://postgres:postgres@localhost:5432/workbook_submission`.
 - Passwords are masked in the frontend login form.
 - Access is split by workbook system and role.
 - Maintenance data feeds library transactions and reports, matching the workbook instructions.
