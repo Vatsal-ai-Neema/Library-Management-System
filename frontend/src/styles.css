@@ -201,6 +201,17 @@ textarea {
   gap: 10px;
 }
 
+.radio-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.radio-row input {
+  width: auto;
+}
+
 .toggle {
   border: 1px solid #d2d9de;
   background: #fff;
