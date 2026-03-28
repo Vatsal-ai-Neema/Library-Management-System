@@ -17,6 +17,8 @@ def login(payload: LoginRequest, db: Session = Depends(get_db)):
     )
     if not user or not user.is_active:
         raise HTTPException(status_code=401, detail="Invalid credentials")
+    if user.system_type != "library":
+        raise HTTPException(status_code=403, detail="Business/CRM login is disabled in this local setup")
     return LoginResponse(
         username=user.username,
         full_name=user.full_name,

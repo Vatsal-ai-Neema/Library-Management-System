@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .db import Base, SessionLocal, engine
-from .routers import auth, business, catalog, dashboard, memberships, reports, transactions, users
+from .routers import auth, catalog, dashboard, memberships, reports, transactions, users
 from .seed import seed_data
 
 Base.metadata.create_all(bind=engine)
@@ -31,9 +31,6 @@ app.include_router(catalog.router)
 app.include_router(users.router)
 app.include_router(transactions.router)
 app.include_router(reports.router)
-app.include_router(business.router)
-
-
 @app.get("/")
 def root():
     return {"message": "Library Management System API"}
