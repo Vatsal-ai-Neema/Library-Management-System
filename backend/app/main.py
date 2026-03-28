@@ -1,3 +1,5 @@
+import os
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -9,11 +11,14 @@ Base.metadata.create_all(bind=engine)
 with SessionLocal() as db:
     seed_data(db)
 
+cors_origins = os.getenv("CORS_ORIGINS", "*")
+allow_origins = ["*"] if cors_origins == "*" else [origin.strip() for origin in cors_origins.split(",") if origin.strip()]
+
 app = FastAPI(title="Library Management System API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allow_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

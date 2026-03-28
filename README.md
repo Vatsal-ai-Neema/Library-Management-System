@@ -88,6 +88,42 @@ npm run dev
 
 The frontend runs at `http://127.0.0.1:5173`.
 
+## Render Deployment
+
+This project is prepared for a Render-only deployment setup:
+
+- Backend: Render Web Service
+- Frontend: Render Static Site
+- Database: Render PostgreSQL
+
+### Environment variables
+
+Backend:
+- `DATABASE_URL`
+- `CORS_ORIGINS`
+
+Frontend:
+- `VITE_API_BASE_URL`
+
+### Render steps
+
+1. Push the latest code to GitHub.
+2. In Render, create a new Blueprint deploy from the repo using [render.yaml](/C:/Users/vatsa/Downloads/Library%20Management%20System/render.yaml).
+3. Render will create:
+   - PostgreSQL database
+   - backend web service
+   - frontend static site
+4. After the first deploy, update these values in `render.yaml` or in the Render dashboard:
+   - backend `CORS_ORIGINS` to your actual frontend Render URL
+   - frontend `VITE_API_BASE_URL` to your actual backend Render URL
+5. Redeploy both services.
+
+### Notes
+
+- The frontend should never keep `http://127.0.0.1:8000` in production.
+- The backend start command on Render is:
+  - `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+
 ## Default Demo Credentials
 
 - Admin: `adm` / `adm`
